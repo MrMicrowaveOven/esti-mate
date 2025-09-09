@@ -3,7 +3,7 @@ import "./LenderDisplay.css"
 const LenderDisplay = ({name, faded, interestRates=[0,0,0,0,0], monthlyPayments=[0,0,0,0,0]}) => {
     return (
         <div className="lender-display">
-            <h1>{name}</h1>
+            <h1 className={faded && 'faded'}>{name}</h1>
             {[5, 7, 10, 12, 15].map((loanLength, index) => {
                 return(
                     <div key={index}>

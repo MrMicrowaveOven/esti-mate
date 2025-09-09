@@ -4,7 +4,7 @@ const YEARS = [5, 7, 10, 12, 15]
 const Display = ({loanAmount, creditScore}) => {
 
     const calculateLenderAInterests = () => {
-        if (creditScore > 300 && creditScore < 450) {
+        if (creditScore >= 300 && creditScore < 450) {
             return Array(5).fill(17.99)
         } else if (creditScore >= 450 && creditScore < 600) {
             return Array(5).fill(16.99)
