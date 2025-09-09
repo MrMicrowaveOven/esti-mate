@@ -2,3 +2,11 @@
     height: 100%;
     width: 100%;
 }
+
+.range-display {
+  display: flex;
+  flex-direction: column;
+  color: grey;
+  margin: 30px;
+  margin-top: 0px;
+}
