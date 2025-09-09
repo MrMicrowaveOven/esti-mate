@@ -24,3 +24,15 @@
 .loan-amount-input-field {
     width: 125px;
 }
+
+@media (max-width: 700px) {
+    .input-text, .dollar-sign-display, .input-field {
+        font-size: large;
+    }
+    .credit-score-input-field {
+        width: 30px;
+    }
+    .loan-amount-input-field {
+        width: 60px;
+    }
+}
