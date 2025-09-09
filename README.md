@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Esti-Mate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Your best mate when it comes to calculating monthly payments through different lenders!
 
-## Available Scripts
+## Purpose
 
-In the project directory, you can run:
+This is an adorable little app I made for my brother.  He works in sales, and when working with lenders it's often hard to calculate the monthly payment for the sale.  There are 5 different lenders, and they offer different interest rates depending on the credit score and loan amount.  If you've ever worked in sales, you know that time is of the essence; no one wants to sit around and wait for the salesman to do the math.
 
-### `npm start`
+This app uses the same formula that the lenders use, with data given by the lenders themselves or otherwise extrapolated from testing.  It also displays the best lender to use for the lowest monthly payment for each loan length (they offer 5, 7, 10, 12, and 15 year loans).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Coming soon
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Loan Outliers
 
-### `npm test`
+Some of the lenders have outliers when it comes to offering financing, which my brother wants to know when making the sale.  For example, one lender might charge a fee to my brother's company for certain loans based on the credit score and loan amount.  This comes out of my brother's commision, so he wants to be able to take this into account when offering discounts.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Eventually, I'd love to calculate things like this into offering the lowest monthly payment.
 
-### `npm run build`
+### Discount Calculator
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+There are certain discounts my brother is able to offer, based on the situation.  For example, if this is the first house in the zip code to get a certain porch installed, they get a discount if they allow before and after photos to be taken.  These discounts are at my brother's discression, since again they cut into this commision.  I'd love to be able to calculate "ideal discounts" for the numbers he's looking for.
