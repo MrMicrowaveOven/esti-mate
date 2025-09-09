@@ -1,0 +1,38 @@
+Dollar amount
+Interest rate
+number of years
+
+Calculate monthly payment
+
+Lender A - 15, 10, 7 years
+Lender B - 10, 7, 5 years
+
+
+
+Dollar Amount of Loan - one number
+Input Credit Score, dollar amount of loan
+
+Interest Rate: Different for lender and # years
+
+5,7,10,12,15
+
+Highlight each lender for lowest monthly payment per loan length in years
+
+use Payment estimator to gather data
+
+For some plans, we take a dealer hit.  Sometimes 8% is charged to James' company.
+
+Monthly Payment Estimator
+
+Green Forever Arizona
+
+Easy Estimate
+
+Lender
+
+Eastimate
+
+Estimeasy
+
+IPAD
+

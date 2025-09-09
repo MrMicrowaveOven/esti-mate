@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Inputs from './Inputs.js';
+import Display from './Display.js';
+import { useState } from 'react';
 
-function App() {
+const App = () => {
+  const [interestRate, setInterestRate] = useState(0)
+  const [loanAmount, setLoanAmount] = useState(0)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Inputs
+        onInterestRateChange={(newInterestRate) => setInterestRate(newInterestRate)}
+        onLoanAmountChange={(newLoanAmount) => setLoanAmount(newLoanAmount)}
+      />
+      <Display
+        interestRate={interestRate}
+        loanAmount={loanAmount}
+      />
     </div>
   );
 }
