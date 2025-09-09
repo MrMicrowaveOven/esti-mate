@@ -33,7 +33,7 @@ const Display = ({loanAmount, creditScore}) => {
         <div className="display">
             <LenderDisplay name="Lender A" interestRates={calculateLenderAInterests()} monthlyPayments={calculateMonthlyPayments(calculateLenderAInterests())}/>
             {["B", "C", "D", "E"].map(name => {
-                return <LenderDisplay name={`Lender ${name}`}></LenderDisplay>
+                return <LenderDisplay key={name} name={`Lender ${name}`} faded={true}></LenderDisplay>
             })}
         </div>
     )
