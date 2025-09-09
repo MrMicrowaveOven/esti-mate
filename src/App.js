@@ -16,16 +16,17 @@ const App = () => {
         creditScore={creditScore}
         loanAmount={loanAmount}
       />
-      {
-          <div className="range-display">
-              <a>Credit Score Ranges:</a>
-              <a>300-449 → Range 5</a>
-              <a>450-599 → Range 4</a>
-              <a>600-699 → Range 3</a>
-              <a>700-799 → Range 2</a>
-              <a>800-850 → Range 1</a>
-          </div>
-      }
+      <div className="range-display">
+          <a>Credit Score Ranges:</a>
+          <a>300-449 → Range 5</a>
+          <a>450-599 → Range 4</a>
+          <a>600-699 → Range 3</a>
+          <a>700-799 → Range 2</a>
+          <a>800-850 → Range 1</a>
+      </div>
+      <div className="legal">
+        <a>All calculations are approximate. Not an endorsement of any lender.</a>
+      </div>
     </div>
   );
 }

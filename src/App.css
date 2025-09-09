@@ -10,3 +10,9 @@
   margin: 30px;
   margin-top: 0px;
 }
+
+.legal {
+  display: flex;
+  justify-content: center;
+  color: gray;
+}
