@@ -1,9 +1,11 @@
 import './Display.css'
+import LenderDisplay from './LenderDisplay';
 const Display = ({loanAmount, creditScore}) => {
     return (
         <div className="display">
-            <a>{creditScore}</a>
-            <a>{loanAmount}</a>
+            {["A", "B", "C", "D", "E"].map(name => {
+                return <LenderDisplay name={`Lender ${name}`}></LenderDisplay>
+            })}
         </div>
     )
 }
