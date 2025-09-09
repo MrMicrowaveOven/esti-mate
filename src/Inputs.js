@@ -7,7 +7,6 @@ const Inputs = ({onCreditScoreChange, onLoanAmountChange}) => {
 
     const validateCreditScore = value => {
         if (value < 300 || value > 850) {
-            setCreditScoreFieldInvalid(true)
             return false
         } else {
             return true
@@ -23,7 +22,6 @@ const Inputs = ({onCreditScoreChange, onLoanAmountChange}) => {
 
     const validateLoanAmount = value => {
         if (!value) {
-            setLoanAmountFieldInvalid(true)
             return false
         } else {
             return true
@@ -45,7 +43,7 @@ const Inputs = ({onCreditScoreChange, onLoanAmountChange}) => {
                 onChange={(event) => creditScoreChange(event.target.value)}
                 type="number"
                 onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()}
-                onBlur={(event) => validateCreditScore(event.target.value)}
+                onBlur={(event) => {if(!validateCreditScore(event.target.value)) setCreditScoreFieldInvalid(true)}}
             />
             <a className={"loan-amount input-text"}>Loan Amount:</a>
             <div>
@@ -55,7 +53,7 @@ const Inputs = ({onCreditScoreChange, onLoanAmountChange}) => {
                     onChange={(event) => loanAmountChange(event.target.value)}
                     type="number"
                     onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()}
-                    onBlur={(event) => validateLoanAmount(event.target.value)}
+                    onBlur={(event) => {if(!validateLoanAmount(event.target.value)) setLoanAmountFieldInvalid()}}
                 />
             </div>
         </div>
