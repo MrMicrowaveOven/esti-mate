@@ -25,6 +25,14 @@
     width: 125px;
 }
 
+.invalid {
+    border-color: red;
+}
+
+.faded {
+    color: gray;
+}
+
 @media (max-width: 700px) {
     .input-text, .dollar-sign-display, .input-field {
         font-size: large;
