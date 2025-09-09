@@ -9,6 +9,7 @@ const Inputs = ({onCreditScoreChange, onLoanAmountChange}) => {
                 className="credit-score-input-field input-field"
                 onChange={(event) => onCreditScoreChange(event.target.value)}
                 type="number"
+                onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()}
             />
             <a className={"loan-amount input-text"}>Loan Amount:</a>
             <div>
@@ -17,6 +18,7 @@ const Inputs = ({onCreditScoreChange, onLoanAmountChange}) => {
                     className="loan-amount-input-field input-field"
                     onChange={(event) => onLoanAmountChange(event.target.value)}
                     type="number"
+                    onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()}
                 />
             </div>
         </div>
