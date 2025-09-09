@@ -1,12 +1,12 @@
 import './Inputs.css';
 
-const Inputs = ({onInterestRateChange, onLoanAmountChange}) => {
+const Inputs = ({onCreditScoreChange, onLoanAmountChange}) => {
 
     return (
         <div className="inputs">
-            <a className={"amount input-text"}>Loan Amount</a>
-            <input onChange={(event) => onInterestRateChange(event.target.value)} type="text"></input>
-            <a className={"interest input-text"}>Interest Rate</a>
+            <a className={"amount input-text"}>Credit Score</a>
+            <input onChange={(event) => onCreditScoreChange(event.target.value)} type="text"></input>
+            <a className={"interest input-text"}>Loan Amount</a>
             <input onChange={(event) => onLoanAmountChange(event.target.value)} type="text"></input>
         </div>
     )

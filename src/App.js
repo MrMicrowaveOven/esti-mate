@@ -4,16 +4,16 @@ import Display from './Display.js';
 import { useState } from 'react';
 
 const App = () => {
-  const [interestRate, setInterestRate] = useState(0)
+  const [creditScore, setCreditScore] = useState(0)
   const [loanAmount, setLoanAmount] = useState(0)
   return (
     <div className="app">
       <Inputs
-        onInterestRateChange={(newInterestRate) => setInterestRate(newInterestRate)}
+        onCreditScoreChange={(newCreditScore) => setCreditScore(newCreditScore)}
         onLoanAmountChange={(newLoanAmount) => setLoanAmount(newLoanAmount)}
       />
       <Display
-        interestRate={interestRate}
+        creditScore={creditScore}
         loanAmount={loanAmount}
       />
     </div>

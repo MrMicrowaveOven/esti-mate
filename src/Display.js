@@ -1,8 +1,8 @@
 import './Display.css'
-const Display = ({loanAmount, interestRate}) => {
+const Display = ({loanAmount, creditScore}) => {
     return (
         <div className="display">
-            <a>{interestRate}</a>
+            <a>{creditScore}</a>
             <a>{loanAmount}</a>
         </div>
     )
