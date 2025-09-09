@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/esti-mate/static/css/main.9f03e044.css",
+    "main.js": "/esti-mate/static/js/main.dac10941.js",
+    "static/js/453.87bb871e.chunk.js": "/esti-mate/static/js/453.87bb871e.chunk.js",
+    "index.html": "/esti-mate/index.html",
+    "main.9f03e044.css.map": "/esti-mate/static/css/main.9f03e044.css.map",
+    "main.dac10941.js.map": "/esti-mate/static/js/main.dac10941.js.map",
+    "453.87bb871e.chunk.js.map": "/esti-mate/static/js/453.87bb871e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f03e044.css",
+    "static/js/main.dac10941.js"
+  ]
+}
