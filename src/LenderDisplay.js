@@ -8,8 +8,8 @@ const LenderDisplay = ({name}) => {
                 return(
                     <div>
                         <h1>{loanLength} Year</h1>
-                        <h3>Interest Rate: </h3>
-                        <h3>Monthly Payment: </h3>
+                        <h3>Interest Rate: 5.99%</h3>
+                        <h3>Monthly Payment: $593.27</h3>
                     </div>
                 )
             })}
