@@ -4,6 +4,7 @@ import './Inputs.css';
 const Inputs = ({onCreditScoreChange, onLoanAmountChange}) => {
     const [creditScoreFieldInvalid, setCreditScoreFieldInvalid] = useState(false)
     const [loanAmountFieldInvalid, setLoanAmountFieldInvalid] = useState(false)
+    const [mode, setMode] = useState("lender")
 
     const validateCreditScore = value => {
         if (value < 300 || value > 850) {
@@ -45,6 +46,14 @@ const Inputs = ({onCreditScoreChange, onLoanAmountChange}) => {
                 onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()}
                 onBlur={(event) => {if(!validateCreditScore(event.target.value)) setCreditScoreFieldInvalid(true)}}
             />
+            <label>
+                <input type="radio" checked={mode === "lender"} onChange={() => setMode("lender")}/>
+                Lender Mode
+            </label>
+            <label>
+                <input type="radio" checked={mode === "interest"} onChange={() => setMode("interest")}/>
+                Interest Mode
+            </label>
             <a className={"loan-amount input-text"}>Loan Amount:</a>
             <div>
                 <a className="dollar-sign-display">$</a>
