@@ -81,11 +81,11 @@ const Inputs = ({creditScore, onCreditScoreChange, loanAmount, onLoanAmountChang
             }
             <div className="input">
                 <label className='radio'>
-                    <input type="radio" checked={mode === "lender"} onChange={() => onModeChange("lender")}/>
+                    <input className="radio-circle" type="radio" checked={mode === "lender"} onChange={() => onModeChange("lender")}/>
                     <a className='input-text'>Lender Mode</a>
                 </label>
                 <label className='radio'>
-                    <input type="radio" checked={mode === "interest"} onChange={() => onModeChange("interest")}/>
+                    <input className="radio-circle" type="radio" checked={mode === "interest"} onChange={() => onModeChange("interest")}/>
                     <a className='input-text'>Interest Mode</a>
                 </label>
             </div>
