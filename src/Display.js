@@ -1,7 +1,7 @@
 import './Display.css'
 import LenderDisplay from './LenderDisplay';
 const YEARS = [5, 7, 10, 12, 15]
-const Display = ({loanAmount, creditScore}) => {
+const Display = ({mode, loanAmount, interestRate, creditScore}) => {
 
     const calculateLenderAInterests = () => {
         if (creditScore >= 300 && creditScore < 450) {
@@ -30,11 +30,18 @@ const Display = ({loanAmount, creditScore}) => {
     }
 
     return (
-        <div className="display">
-            <LenderDisplay name="AQUA" interestRates={calculateLenderAInterests()} monthlyPayments={calculateMonthlyPayments(calculateLenderAInterests())}/>
-            {["B", "C", "D", "E"].map(name => {
-                return <LenderDisplay key={name} name={`Lender ${name}`} faded={true}></LenderDisplay>
-            })}
+        <div>
+            {   mode === "lender"
+                ?
+                    <div className="display">
+                        <LenderDisplay name="AQUA" interestRates={calculateLenderAInterests()} monthlyPayments={calculateMonthlyPayments(calculateLenderAInterests())}/>
+                        {["B", "C", "D", "E"].map(name => {
+                            return <LenderDisplay key={name} name={`Lender ${name}`} faded={true}></LenderDisplay>
+                        })}
+                    </div>
+                :
+                    <div></div>
+            }
         </div>
     )
 }

@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import './Inputs.css';
 
-const Inputs = ({onCreditScoreChange, onLoanAmountChange, mode, onModeChange}) => {
+const Inputs = ({creditScore, onCreditScoreChange, loanAmount, onLoanAmountChange, interestRate, onInterestRateChange, mode, onModeChange}) => {
     const [creditScoreFieldInvalid, setCreditScoreFieldInvalid] = useState(false)
     const [loanAmountFieldInvalid, setLoanAmountFieldInvalid] = useState(false)
+    const [interestRateFieldInvalid, setInterestRateFieldInvalid] = useState(false)
 
     const validateCreditScore = value => {
         if (value < 300 || value > 850) {
@@ -18,6 +19,21 @@ const Inputs = ({onCreditScoreChange, onLoanAmountChange, mode, onModeChange}) =
             setCreditScoreFieldInvalid(false)
         }
         onCreditScoreChange(value)
+    }
+
+    const validateInterestRate = value => {
+        if (value > 100) {
+            return false
+        } else {
+            return true
+        }
+    }
+
+    const interestRateChange = (value) => {
+        if(validateInterestRate(value)) {
+            setInterestRateFieldInvalid(false)
+        }
+        onInterestRateChange(value)
     }
 
     const validateLoanAmount = value => {
@@ -37,14 +53,32 @@ const Inputs = ({onCreditScoreChange, onLoanAmountChange, mode, onModeChange}) =
 
     return (
         <div className="inputs">
-            <a className={"credit-score input-text"}>Credit Score:</a>
-            <input
-                className={`credit-score-input-field input-field ${creditScoreFieldInvalid && "invalid"}`}
-                onChange={(event) => creditScoreChange(event.target.value)}
-                type="number"
-                onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()}
-                onBlur={(event) => {if(!validateCreditScore(event.target.value)) setCreditScoreFieldInvalid(true)}}
-            />
+            {mode === "lender"
+                ?
+                    <div>
+                        <a className={"credit-score input-text"}>Credit Score:</a>
+                        <input
+                            className={`credit-score-input-field input-field ${creditScoreFieldInvalid && "invalid"}`}
+                            onChange={(event) => creditScoreChange(event.target.value)}
+                            value={creditScore}
+                            type="number"
+                            onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()}
+                            onBlur={(event) => {if(!validateCreditScore(event.target.value)) setCreditScoreFieldInvalid(true)}}
+                        />
+                    </div>
+                :
+                    <div>
+                        <a className={"interest-rate input-text"}>Interest Rate:</a>
+                        <input
+                            className={`interest-rate-input-field input-field ${interestRateFieldInvalid && "invalid"}`}
+                            onChange={(event) => interestRateChange(event.target.value)}
+                            value={interestRate}
+                            type="number"
+                            onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()}
+                            onBlur={(event) => {if(!validateInterestRate(event.target.value)) setInterestRateFieldInvalid(true)}}
+                        />
+                    </div>
+            }
             <label>
                 <input type="radio" checked={mode === "lender"} onChange={() => onModeChange("lender")}/>
                 Lender Mode
@@ -59,6 +93,7 @@ const Inputs = ({onCreditScoreChange, onLoanAmountChange, mode, onModeChange}) =
                 <input
                     className={`loan-amount-input-field input-field ${loanAmountFieldInvalid && "invalid"}`}
                     onChange={(event) => loanAmountChange(event.target.value)}
+                    value={loanAmount}
                     type="number"
                     onKeyDown={(evt) => ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()}
                     onBlur={(event) => {if(!validateLoanAmount(event.target.value)) setLoanAmountFieldInvalid()}}

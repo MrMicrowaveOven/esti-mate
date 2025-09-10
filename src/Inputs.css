@@ -21,6 +21,10 @@
     width: 75px;
 }
 
+.interest-rate-input-field {
+    width: 100px;
+}
+
 .loan-amount-input-field {
     width: 125px;
 }
@@ -39,6 +43,9 @@
     }
     .credit-score-input-field {
         width: 30px;
+    }
+    .interest-rate-input-field {
+        width: 40px;
     }
     .loan-amount-input-field {
         width: 60px;
