@@ -11,11 +11,11 @@
     text-align: center;
 }
 
-h1 {
+.year-group h1 {
     font-size: 30px !important;
 }
 
-h3 {
+.year-group h3 {
     font-size: 25px !important;
 }
 
