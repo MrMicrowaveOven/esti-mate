@@ -5,9 +5,9 @@ const YEARS = [5, 7, 10, 12, 15]
 const InterestDisplay = ({monthlyPayments}) =>
     <div className="interest-display">
         {YEARS.map((numYears, index) =>
-            <div>
+            <div className="year-group">
                 <h1>
-                    {numYears} Year
+                    {numYears} Year:
                 </h1>
                 {monthlyPayments[index]
                     ?

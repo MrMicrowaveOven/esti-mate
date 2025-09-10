@@ -10,3 +10,15 @@
 .center {
     text-align: center;
 }
+
+h1 {
+    font-size: 30px !important;
+}
+
+h3 {
+    font-size: 25px !important;
+}
+
+.year-group {
+    margin: 20px;
+}
