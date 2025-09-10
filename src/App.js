@@ -9,7 +9,7 @@ const App = () => {
   const [creditScore, setCreditScore] = useState(0)
   const [loanAmount, setLoanAmount] = useState(0)
   const [interestRate, setInterestRate] = useState(0)
-  const [mode, setMode] = useState("lender")
+  const [mode, setMode] = useState("interest")
   return (
     <div className="app">
       <Inputs
