@@ -3,12 +3,13 @@ import Inputs from './Inputs.js';
 import Display from './Display.js';
 import { useState } from 'react';
 
+const YEARS = [5, 7, 10, 12, 15]
+
 const App = () => {
   const [creditScore, setCreditScore] = useState(0)
   const [loanAmount, setLoanAmount] = useState(0)
   const [interestRate, setInterestRate] = useState(0)
   const [mode, setMode] = useState("lender")
-
   return (
     <div className="app">
       <Inputs

@@ -1,6 +1,9 @@
 import './Display.css'
+import InterestDisplay from './InterestDisplay'
 import LenderDisplay from './LenderDisplay';
+
 const YEARS = [5, 7, 10, 12, 15]
+
 const Display = ({mode, loanAmount, interestRate, creditScore}) => {
 
     const calculateLenderAInterests = () => {
@@ -33,14 +36,16 @@ const Display = ({mode, loanAmount, interestRate, creditScore}) => {
         <div>
             {   mode === "lender"
                 ?
-                    <div className="display">
+                    <div className="display-lender-mode">
                         <LenderDisplay name="AQUA" interestRates={calculateLenderAInterests()} monthlyPayments={calculateMonthlyPayments(calculateLenderAInterests())}/>
                         {["B", "C", "D", "E"].map(name => {
                             return <LenderDisplay key={name} name={`Lender ${name}`} faded={true}></LenderDisplay>
                         })}
                     </div>
                 :
-                    <div></div>
+                    <div className="display-interest-mode">
+                        <InterestDisplay monthlyPayments={calculateMonthlyPayments(Array(5).fill(interestRate))} />
+                    </div>
             }
         </div>
     )
