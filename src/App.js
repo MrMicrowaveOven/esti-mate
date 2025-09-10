@@ -38,9 +38,11 @@ const App = () => {
             <a>800-850 → Range 1</a>
         </div>
       }
-      <div className="legal">
-        <a>All calculations are approximate. Not an endorsement of any lender.</a>
-      </div>
+      {mode === "lender" &&
+        <div className="legal">
+          <a>All calculations are approximate. Not an endorsement of any lender.</a>
+        </div>
+      }
     </div>
   );
 }

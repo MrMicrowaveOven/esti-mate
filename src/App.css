@@ -12,9 +12,9 @@
 }
 
 .legal {
+  color: gray;
   display: flex;
   justify-content: center;
-  color: gray;
   text-align: center;
   margin-left: 30px;
   margin-right: 30px;
