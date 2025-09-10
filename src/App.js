@@ -6,11 +6,15 @@ import { useState } from 'react';
 const App = () => {
   const [creditScore, setCreditScore] = useState(0)
   const [loanAmount, setLoanAmount] = useState(0)
+  const [mode, setMode] = useState("lender")
+
   return (
     <div className="app">
       <Inputs
         onCreditScoreChange={(newCreditScore) => setCreditScore(newCreditScore)}
         onLoanAmountChange={(newLoanAmount) => setLoanAmount(newLoanAmount)}
+        mode={mode}
+        onModeChange={(newMode) => setMode(newMode)}
       />
       <Display
         creditScore={creditScore}

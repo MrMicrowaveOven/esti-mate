@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import './Inputs.css';
 
-const Inputs = ({onCreditScoreChange, onLoanAmountChange}) => {
+const Inputs = ({onCreditScoreChange, onLoanAmountChange, mode, onModeChange}) => {
     const [creditScoreFieldInvalid, setCreditScoreFieldInvalid] = useState(false)
     const [loanAmountFieldInvalid, setLoanAmountFieldInvalid] = useState(false)
-    const [mode, setMode] = useState("lender")
 
     const validateCreditScore = value => {
         if (value < 300 || value > 850) {
@@ -47,11 +46,11 @@ const Inputs = ({onCreditScoreChange, onLoanAmountChange}) => {
                 onBlur={(event) => {if(!validateCreditScore(event.target.value)) setCreditScoreFieldInvalid(true)}}
             />
             <label>
-                <input type="radio" checked={mode === "lender"} onChange={() => setMode("lender")}/>
+                <input type="radio" checked={mode === "lender"} onChange={() => onModeChange("lender")}/>
                 Lender Mode
             </label>
             <label>
-                <input type="radio" checked={mode === "interest"} onChange={() => setMode("interest")}/>
+                <input type="radio" checked={mode === "interest"} onChange={() => onModeChange("interest")}/>
                 Interest Mode
             </label>
             <a className={"loan-amount input-text"}>Loan Amount:</a>
