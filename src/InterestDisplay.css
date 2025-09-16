@@ -5,6 +5,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    margin-top: 40px;
 }
 
 .center {
@@ -20,5 +21,10 @@
 }
 
 .year-group {
-    margin: 10px;
+    padding: 10px;
+    border: black 1px solid;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
