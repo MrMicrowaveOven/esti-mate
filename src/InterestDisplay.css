@@ -22,7 +22,7 @@
 
 .year-group {
   padding: 10px;
-  border: black 1px solid;
+  border: white 1px solid;
   width: 150px;
   display: flex;
   flex-direction: column;
