@@ -18,7 +18,9 @@ Where `M` is the monthly payment, `P` is the Principal Loan Amount, `i` is the m
 
 This mode uses the known interest rates of 5 different lenders that his company works with. Each lender offers different interest rates depending on the credit score and loan amount.
 
-This app uses the same formula that the lenders use, with data given by the lenders themselves or otherwise extrapolated from testing. It also displays the best lender to use for the lowest monthly payment for each loan length.
+This app will use the same formula that the lenders use, with data given by the lenders themselves or otherwise extrapolated from testing. It also displays the best lender to use for the lowest monthly payment for each loan length.
+
+We'll need permission to use this data, which is currently pending.
 
 ## Coming soon
 
