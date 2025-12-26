@@ -12,13 +12,13 @@ const App = () => {
   const [interestRate, setInterestRate] = useState(0);
   const [mode, setMode] = useState(localStorage.getItem("mode") || "interest");
   const [nightMode, setNightMode] = useState(
-    localStorage.getItem("nightMode" || false)
+    localStorage.getItem("nightMode") === "true"
   );
 
   useEffect(() => {
     localStorage.setItem("mode", mode);
     localStorage.setItem("nightMode", nightMode);
-  }, [mode]);
+  }, [mode, nightMode]);
 
   return (
     <div className="app">
