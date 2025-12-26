@@ -1,19 +1,18 @@
-body {
-  background-color: black;
-}
-
 .app {
   height: 100%;
   width: 100%;
+}
+
+.night-mode {
   color: white;
   background-color: black;
 }
 
-input {
+/* input {
   color: white;
   border: white;
   background-color: black;
-}
+} */
 
 .range-display {
   display: flex;
