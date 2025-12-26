@@ -18,10 +18,11 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem("mode", mode);
     localStorage.setItem("nightMode", nightMode);
+    document.body.style.backgroundColor = nightMode ? "black" : "white";
   }, [mode, nightMode]);
 
   return (
-    <div className="app">
+    <div className={`app ${nightMode ? "night-mode" : ""}`}>
       <Inputs
         creditScore={creditScore}
         onCreditScoreChange={(newCreditScore) => setCreditScore(newCreditScore)}
@@ -32,6 +33,7 @@ const App = () => {
           setInterestRate(newInterestRate)
         }
         mode={mode}
+        nightMode={nightMode}
         onModeChange={(newMode) => setMode(newMode)}
       />
       <Display
@@ -39,6 +41,7 @@ const App = () => {
         creditScore={creditScore}
         interestRate={interestRate}
         loanAmount={loanAmount}
+        nightMode={nightMode}
       />
       <NightModeSwitch
         nightMode={nightMode}
