@@ -45,7 +45,7 @@ const App = () => {
       />
       <NightModeSwitch
         nightMode={nightMode}
-        onNightModeChange={(newNightMode) => setNightMode(newNightMode)}
+        onNightModeChange={() => setNightMode(!nightMode)}
       />
       {mode === "lender" && (
         <div className="range-display">
