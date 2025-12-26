@@ -8,7 +8,11 @@ This is an adorable little app I made for my brother. He works in sales, and whe
 
 ### Interest Mode
 
-This is the simple mode. With a Loan Amount and Interest Rate, this calculates the monthly payment for loans of each length.
+This is the simple mode. With a Loan Amount and Interest Rate, this calculates the monthly payment for loans of each length. This uses the following formula:
+
+M = P [ i(1 + i)^n ] / [ (1 + i)^n – 1]
+
+Where `M` is the monthly payment, `P` is the Principal Loan Amount, `i` is the monthly interest rate (annual rate / 12), and `n` is the total number of payments (loan length in years \* 12)
 
 ### Lender Mode (coming soon)
 
@@ -20,10 +24,10 @@ This app uses the same formula that the lenders use, with data given by the lend
 
 ### Loan Outliers
 
-Some of the lenders have outliers when it comes to offering financing, which my brother wants to know when making the sale. For example, one lender might charge a fee to my brother's company for certain loans based on the customer's credit score and loan amount. This comes out of my brother's commision, so he wants to be able to take this into account when offering discounts.
+Some of the lenders have outliers when it comes to offering financing, which my brother wants to know when making the sale. For example, one lender might charge a fee to my brother's company for certain loans based on the customer's credit score and loan amount. This comes out of my brother's commission, so he wants to be able to take this into account when offering discounts.
 
 Eventually, I'd love to calculate things like this into offering the lowest monthly payment.
 
 ### Discount Calculator
 
-There are certain discounts my brother is able to offer, based on the situation. For example, if this is the first house in the zip code to get a certain porch installed, they get a discount if they allow Before and After photos to be taken. These discounts are at my brother's discression, since again they cut into his commision. I'd love to be able to calculate "ideal discounts" for the numbers he's looking for.
+There are certain discounts my brother is able to offer, based on the situation. For example, if this is the first house in the zip code to get a certain porch installed, they get a discount if they allow Before and After photos to be taken. These discounts are at my brother's discression, since again they cut into his commission. I'd love to be able to calculate "ideal discounts" for the numbers he's looking for.
