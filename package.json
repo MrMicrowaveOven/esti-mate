@@ -2,6 +2,7 @@
   "name": "esti-mate",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mrmicrowaveoven.github.io/esti-mate",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
@@ -18,7 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "echo 'esti-mate.site' > ./build/CNAME && gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
